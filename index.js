@@ -3,7 +3,7 @@ const jokeText = document.querySelector('.joke-text');
 
 const newJokeBtn = document.querySelector('.new-joke-btn');
 
-const tweetBtn = document.querySelector('.tweet-btn');
+
 
 newJokeBtn.addEventListener('click', getJoke);
 
@@ -25,10 +25,6 @@ function getJoke() {
     const joke = data.joke;
 
     jokeText.innerText = joke;
-
-    const tweetLink = `https://twitter.com/share?text=${joke}`;
-
-    tweetBtn.setAttribute('href', tweetLink);
   }).catch(function(error) {
 
     jokeText.innerText = 'Oops! Some error happened :(';
